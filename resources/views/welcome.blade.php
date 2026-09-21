@@ -277,11 +277,11 @@
                 <span id="clock">Sistema en línea</span>
             </div>
 
-            <h1>Bienvenido a {{ config('app.name', 'tu sistema') }}</h1>
+            <h1>Bienvenido al {{ config('app.name', 'tu sistema') }}</h1>
 
             <p class="lead">
                 Un solo panel para administrar tus operaciones, dar seguimiento a tus procesos
-                y mantener el control de la información de tu empresa.
+                y mantener el control de la información de ISEL.
             </p>
 
             <div class="cta-row">
