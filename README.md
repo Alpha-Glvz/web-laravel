@@ -1,58 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistema de Inventario de TI
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistema desarrollado en **Laravel** para el control y administración del inventario tecnológico de la empresa, cubriendo tanto **hardware** como **software**, con seguimiento detallado y automatizado de todo el ciclo de vida de los activos.
 
-## About Laravel
+## 📋 Descripción
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este sistema centraliza el control del inventario de TI, permitiendo llevar un registro exhaustivo de equipos y licencias, así como automatizar los procesos de entrega, devolución y activación asociados a cada usuario y máquina.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎯 Objetivo
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Contar con una herramienta que permita:
 
-## Learning Laravel
+- Mantener un inventario completo y actualizado de **hardware** (equipos de cómputo, periféricos, accesorios, etc.).
+- Mantener un inventario completo de **software** (licencias, versiones, claves de activación).
+- Automatizar el registro de **entrada y salida de equipos** (préstamos, asignaciones, devoluciones).
+- Automatizar el control de **activaciones de licencias** por máquina y por usuario, evitando duplicidad o uso no autorizado.
+- Tener trazabilidad histórica de cada activo: quién lo tiene, desde cuándo, y su estado actual.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ✨ Funcionalidades principales *(planeadas)*
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Inventario de Hardware
+- [ ] Registro de equipos (marca, modelo, número de serie, especificaciones)
+- [ ] Estado del equipo (disponible, asignado, en reparación, de baja)
+- [ ] Historial de asignaciones por equipo
+- [ ] Generación de vale de préstamo / resguardo al asignar un equipo
+- [ ] Alertas de mantenimiento o garantía próxima a vencer
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Inventario de Software
+- [ ] Catálogo de software y licencias disponibles
+- [ ] Registro de activaciones por máquina y por usuario
+- [ ] Control de vigencia de licencias (perpetuas, suscripción, por renovar)
+- [ ] Alertas de licencias próximas a vencer o sin uso
+- [ ] Relación software–equipo–usuario para trazabilidad completa
 
-## Agentic Development
+### Automatización
+- [ ] Flujo de entrega/recepción de equipo con firma o confirmación digital
+- [ ] Notificaciones automáticas ante cambios de estado (asignación, devolución, vencimiento)
+- [ ] Reportes automáticos de inventario (por usuario, por área, por tipo de activo)
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### Usuarios y permisos
+- [ ] Roles diferenciados (administrador TI, consulta, etc.)
+- [ ] Historial de acciones por usuario del sistema
+
+## 🛠️ Stack tecnológico
+
+- **Backend:** Laravel
+- **Base de datos:** *por definir*
+- **Frontend:** *por definir*
+
+> Este README se actualizará conforme se defina el resto del stack y avance el desarrollo.
+
+## 🚀 Instalación
 
 ```bash
-composer require laravel/boost --dev
+# Clonar el repositorio
+git clone git@github.com:usuario/web-laravel.git
+cd web-laravel
 
-php artisan boost:install
+# Instalar dependencias
+composer install
+
+# Configurar entorno
+cp .env.example .env
+php artisan key:generate
+
+# Configurar la base de datos en el archivo .env
+
+# Ejecutar migraciones
+php artisan migrate
+
+# Levantar servidor de desarrollo
+php artisan serve
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## 📁 Estructura del proyecto
 
-## Contributing
+Proyecto basado en la estructura estándar de Laravel.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📌 Estado del proyecto
 
-## Code of Conduct
+🚧 **En planeación inicial** — este documento describe el alcance funcional del sistema; el desarrollo se encuentra en etapas tempranas.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📄 Licencia
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+*Por definir.*
