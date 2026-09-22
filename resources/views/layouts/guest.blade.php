@@ -19,8 +19,7 @@
             @auth
                 <a href="{{ route('dashboard') }}" class="btn-primary">Ir al panel</a>
             @else
-                <a href="{{ route('login') }}" class="btn-ghost">Iniciar sesión</a>
-                <a href="{{ route('register') }}" class="btn-primary">Crear cuenta</a>
+                <a href="{{ route('login') }}" class="btn-primary">Iniciar sesión</a>
             @endauth
         </nav>
     </header>

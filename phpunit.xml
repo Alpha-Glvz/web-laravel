@@ -32,5 +32,8 @@
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>
+        <env name="ADMIN_NAME" value="Ángel Gálvez"/>
+        <env name="ADMIN_EMAIL" value="galvezalpha@gmail.com"/>
+        <env name="ADMIN_PASSWORD" value="password"/>
     </php>
 </phpunit>

@@ -114,4 +114,21 @@ return [
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Initial Administrator
+    |--------------------------------------------------------------------------
+    |
+    | These values are used by the admin seeder to create the first user.
+    | Set ADMIN_PASSWORD in the environment; if it is empty, a password
+    | will be generated once when the seeder creates the account.
+    |
+    */
+
+    'admin' => [
+        'name' => env('ADMIN_NAME', 'Ángel Gálvez'),
+        'email' => env('ADMIN_EMAIL', 'galvezalpha@gmail.com'),
+        'password' => env('ADMIN_PASSWORD'),
+    ],
+
 ];

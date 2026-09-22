@@ -15,6 +15,9 @@
                 {{ config('app.name') }}
             </a>
             <nav style="display:flex;gap:12px;align-items:center;">
+                @can('manageUsers')
+                    <a href="{{ route('users.index') }}" class="btn-ghost">Usuarios</a>
+                @endcan
                 <span style="color:var(--color-muted);font-size:0.9rem;">{{ auth()->user()->name }}</span>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

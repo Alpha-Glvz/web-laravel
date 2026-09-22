@@ -41,7 +41,6 @@
 
             <div class="auth-links">
                 <a href="{{ route('password.request') }}">Olvidé mi contraseña</a>
-                <a href="{{ route('register') }}">Crear cuenta</a>
             </div>
         </div>
     </div>

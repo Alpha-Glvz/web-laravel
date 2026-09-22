@@ -12,7 +12,9 @@ class AuthenticationTest extends TestCase
 
     public function test_login_screen_can_be_rendered(): void
     {
-        $this->get(route('login'))->assertOk();
+        $this->get(route('login'))
+            ->assertOk()
+            ->assertDontSee('Crear cuenta', false);
     }
 
     public function test_users_can_authenticate_using_the_login_screen(): void
@@ -40,16 +42,18 @@ class AuthenticationTest extends TestCase
         $this->assertGuest();
     }
 
-    public function test_new_users_can_register(): void
+    public function test_public_registration_is_disabled(): void
     {
-        $response = $this->post(route('register'), [
+        $this->get('/register')->assertNotFound();
+
+        $this->post('/register', [
             'name' => 'Test User',
             'email' => 'test@example.com',
             'password' => 'password',
             'password_confirmation' => 'password',
-        ]);
+        ])->assertNotFound();
 
-        $this->assertAuthenticated();
-        $response->assertRedirect(route('dashboard'));
+        $this->assertGuest();
+        $this->assertDatabaseMissing('users', ['email' => 'test@example.com']);
     }
 }
