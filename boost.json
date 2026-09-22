@@ -1,0 +1,7 @@
+{
+    "agents": ["cursor"],
+    "guidelines": true,
+    "mcp": false,
+    "packages": [],
+    "skills": true
+}
